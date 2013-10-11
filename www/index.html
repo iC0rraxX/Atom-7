@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test - iOS 7 Style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-title" content="Test iOS 7">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="keywords" content="iOS 7 Style, UI, webapp, app.js">
+    <link rel="apple-touch-icon-precomposed" href="http://corraftp.tk/apple-touch-icon-precomposed.png">
+    <link rel="shortcut icon" href="http://corraftp.tk/favicon.png">
+    
+    
+    
+    <!-- /iPhone SPLASHSCREEN -->
+<link href='img/apple-touch-startup-image-320x460.png' media='(device-width: 320px)' rel='apple-touch-startup-image'>
+<!-- /iPhone (Retina) SPLASHSCREEN -->
+<link href='img/apple-touch-startup-image-640x920.png' media='(device-width: 320px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+<!-- /iPhone 5 (Retina) SPLASHSCREEN -->
+<link href='img/apple-touch-startup-image-640x1096.png' media='(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+<!-- /iPad (portrait) SPLASHSCREEN -->
+<link href='img/apple-touch-startup-image-768x1004.png' media='(device-width: 768px) and (orientation: portrait)' rel='apple-touch-startup-image'>
+<!-- /iPad (landscape) SPLASHSCREEN -->
+<link href='img/apple-touch-startup-image-748x1024.png' media='(device-width: 768px) and (orientation: landscape)' rel='apple-touch-startup-image'>
+<!-- /iPad (Retina, portrait) SPLASHSCREEN -->
+<link href='img/apple-touch-startup-image-1536x2008.png' media='(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+<!-- /iPad (Retina, landscape) SPLASHSCREEN -->
+<link href='img/apple-touch-startup-image-2048x1496.png' media='(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)' rel='apple-touch-startup-image'>
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="src/default.css">
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">Home</div>
+      </div>
+      <div class="app-content">
+        <div class="app-section">
+          <div class="app-button" data-target="page2">Vai a Pagina 2</div>
+          <div class="app-button" data-target="page3">Vai a Pagina 3</div>
+        </div>
+      </div>
+      
+
+    <div class="app-page" data-page="page2">
+      <div class="app-topbar">
+        <div class="app-button left" data-back="true">Indietro</div>
+        <div class="app-title">Pagina 2</div>
+      </div>
+      <div class="app-content">
+        <br><p align="center">Pagina 2 &#232; vuota</p>
+      </div>
+    </div>
+    
+    <div class="app-page" data-page="page3">
+      <div class="app-topbar">
+        <div class="app-button left" data-back="true">Indietro</div>
+        <div class="app-title">Pagina 3</div>
+      </div>
+      <div class="app-content">
+      <br><p align="center">Pagina 3 &#232; vuota</p>
+      </div>
+    </div>
+    
+    <script src="src/zepto.js"></script>
+    <script src="src/app.js"></script>
+    <!- Add2Home ->
+    <link rel="stylesheet" href="src/add2home.css">
+	<script type="text/javascript" src="src/add2home.js" charset="utf-8"></script>
+	<!- / Add2Home ->
+    <script>
+      App.populator('home', function (page) {
+        // put stuff here
+      });
+
+      App.populator('page2', function (page) {
+        // put stuff here
+      });
+      
+      App.populator('page3', function (page) {
+        // put stuff here
+      });
+
+      
+      try {
+        App.restore();
+      }
+      catch (err) {
+        App.load('home');
+      }
+    </script>
+  </body>
+</html>
